@@ -3,15 +3,14 @@ package inc.a13xis.legacy.koresample.tree;
 import inc.a13xis.legacy.koresample.common.block.StairsBlock;
 import net.minecraft.block.Block;
 
-public interface DefinesStairs
-{
-    void assignStairsBlock(StairsBlock block);
+public interface DefinesStairs {
+	void assignStairsBlock(StairsBlock block);
 
-    StairsBlock stairsBlock();
+	StairsBlock stairsBlock();
 
-    Block stairsModelBlock();
+	Block stairsModelBlock();
 
-    Enum stairsModelSubBlockVariant();
+	Enum stairsModelSubBlockVariant();
 
-    String stairsName();
+	String stairsName();
 }

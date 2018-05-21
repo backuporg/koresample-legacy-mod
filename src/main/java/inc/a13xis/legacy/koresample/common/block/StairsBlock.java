@@ -6,35 +6,31 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 
-public abstract class StairsBlock extends BlockStairs
-{
-    protected Enum variant;
-    protected StairsBlock(DefinesStairs model)
-    {
-        super(model.stairsModelBlock().getStateFromMeta(model.stairsModelSubBlockVariant().ordinal()));
-        this.variant=model.stairsModelSubBlockVariant();
-        setUnlocalizedName("stairs");
-    }
+public abstract class StairsBlock extends BlockStairs {
+	protected Enum variant;
 
-    @SuppressWarnings("WeakerAccess")
-    protected static String getUnwrappedUnlocalizedName(String unlocalizedName)
-    {
-        return unlocalizedName.substring(unlocalizedName.indexOf('.') + 1);
-    }
+	protected StairsBlock(DefinesStairs model) {
+		super(model.stairsModelBlock().getStateFromMeta(model.stairsModelSubBlockVariant().ordinal()));
+		this.variant = model.stairsModelSubBlockVariant();
+		setUnlocalizedName("stairs");
+	}
 
-    @Override
-    public final String getUnlocalizedName()
-    {
-        return "tile." + resourcePrefix() + getUnwrappedUnlocalizedName(super.getUnlocalizedName());
-    }
+	@SuppressWarnings("WeakerAccess")
+	protected static String getUnwrappedUnlocalizedName(String unlocalizedName) {
+		return unlocalizedName.substring(unlocalizedName.indexOf('.') + 1);
+	}
 
-    protected abstract String resourcePrefix();
+	@Override
+	public final String getUnlocalizedName() {
+		return "tile." + resourcePrefix() + getUnwrappedUnlocalizedName(super.getUnlocalizedName());
+	}
 
-    public void registerItemModels()
-    {
-            ModelResourceLocation typeLocation = new ModelResourceLocation(getRegistryName(),"facing=east,half=bottom,shape=straight");
-            //ModelResourceLocation typeItemLocation = new ModelResourceLocation(getRegistryName().toString().substring(0,getRegistryName().toString().length()-1)+"_"+define.leavesSubBlockVariant().name().toLowerCase(),"inventory");
-            Item blockItem = Item.getItemFromBlock(this);
-            ModelLoader.setCustomModelResourceLocation(blockItem,0,typeLocation);
-    }
+	protected abstract String resourcePrefix();
+
+	public void registerItemModels() {
+		ModelResourceLocation typeLocation = new ModelResourceLocation(getRegistryName(), "facing=east,half=bottom,shape=straight");
+		//ModelResourceLocation typeItemLocation = new ModelResourceLocation(getRegistryName().toString().substring(0,getRegistryName().toString().length()-1)+"_"+define.leavesSubBlockVariant().name().toLowerCase(),"inventory");
+		Item blockItem = Item.getItemFromBlock(this);
+		ModelLoader.setCustomModelResourceLocation(blockItem, 0, typeLocation);
+	}
 }

@@ -6,21 +6,20 @@ import inc.a13xis.legacy.koresample.tree.block.SaplingBlock;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 @SuppressWarnings("InterfaceNeverImplemented")
-public interface DefinesTree
-{
-    LeavesBlock leavesBlock();
+public interface DefinesTree {
+	LeavesBlock leavesBlock();
 
-    Enum leavesSubBlockVariant();
+	Enum leavesSubBlockVariant();
 
-    LogBlock logBlock();
+	LogBlock logBlock();
 
-    Enum logSubBlockVariant();
+	Enum logSubBlockVariant();
 
-    SaplingBlock saplingBlock();
+	SaplingBlock saplingBlock();
 
-    Enum saplingSubBlockVariant();
+	Enum saplingSubBlockVariant();
 
-    WorldGenerator saplingTreeGenerator();
+	WorldGenerator saplingTreeGenerator();
 
-    WorldGenerator worldTreeGenerator();
+	WorldGenerator worldTreeGenerator();
 }

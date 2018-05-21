@@ -2,17 +2,16 @@ package inc.a13xis.legacy.koresample.tree;
 
 import inc.a13xis.legacy.koresample.tree.block.LeavesBlock;
 
-public interface DefinesLeaves extends ProvidesColor
-{
-    void assignLeavesBlock(LeavesBlock block);
+public interface DefinesLeaves extends ProvidesColor {
+	void assignLeavesBlock(LeavesBlock block);
 
-    void assignLeavesSubBlockVariant(Enum variant);
+	void assignLeavesSubBlockVariant(Enum variant);
 
-    LeavesBlock leavesBlock();
+	LeavesBlock leavesBlock();
 
-    Enum leavesSubBlockVariant();
+	Enum leavesSubBlockVariant();
 
-    DefinesSapling saplingDefinition();
+	DefinesSapling saplingDefinition();
 
-    String speciesName();
+	String speciesName();
 }

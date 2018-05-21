@@ -3,19 +3,18 @@ package inc.a13xis.legacy.koresample.tree;
 import inc.a13xis.legacy.koresample.tree.block.LogBlock;
 import net.minecraft.block.Block;
 
-public interface DefinesLog
-{
-    void assignLogBlock(LogBlock block);
+public interface DefinesLog {
+	void assignLogBlock(LogBlock block);
 
-    void assignLogSubBlockVariant(Enum index);
+	void assignLogSubBlockVariant(Enum index);
 
-    Block logBlock();
+	Block logBlock();
 
-    Enum logSubBlockVariant();
+	Enum logSubBlockVariant();
 
-    String speciesName();
+	String speciesName();
 
-    Block woodBlock();
+	Block woodBlock();
 
-    Enum woodSubBlockVariant();
+	Enum woodSubBlockVariant();
 }
